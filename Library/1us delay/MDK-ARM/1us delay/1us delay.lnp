@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"1us delay\startup_stm32f103xb.o"
+"1us delay\system_stm32f1xx.o"
+"1us delay\stm32f1xx_hal.o"
+"1us delay\stm32f1xx_hal_tim_ex.o"
+"1us delay\stm32f1xx_hal_flash.o"
+"1us delay\stm32f1xx_hal_gpio.o"
+"1us delay\stm32f1xx_hal_flash_ex.o"
+"1us delay\stm32f1xx_hal_rcc.o"
+"1us delay\stm32f1xx_hal_rcc_ex.o"
+"1us delay\stm32f1xx_hal_gpio_ex.o"
+"1us delay\stm32f1xx_hal_pwr.o"
+"1us delay\stm32f1xx_hal_dma.o"
+"1us delay\stm32f1xx_hal_cortex.o"
+"1us delay\stm32f1xx_hal_tim.o"
+"1us delay\main.o"
+"1us delay\stm32f1xx_hal_msp.o"
+"1us delay\stm32f1xx_it.o"
+"1us delay\dwt_stm32_delay.o"
+--library_type=microlib --strict --scatter "1us delay\1us delay.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "1us delay.map" -o "1us delay\1us delay.axf"

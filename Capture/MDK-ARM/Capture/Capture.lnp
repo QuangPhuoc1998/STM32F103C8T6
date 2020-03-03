@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"capture\startup_stm32f103xb.o"
+"capture\main.o"
+"capture\stm32f1xx_it.o"
+"capture\stm32f1xx_hal_msp.o"
+"capture\stm32f1xx_hal_gpio_ex.o"
+"capture\stm32f1xx_hal_tim.o"
+"capture\stm32f1xx_hal_tim_ex.o"
+"capture\stm32f1xx_hal.o"
+"capture\stm32f1xx_hal_rcc.o"
+"capture\stm32f1xx_hal_rcc_ex.o"
+"capture\stm32f1xx_hal_gpio.o"
+"capture\stm32f1xx_hal_dma.o"
+"capture\stm32f1xx_hal_cortex.o"
+"capture\stm32f1xx_hal_pwr.o"
+"capture\stm32f1xx_hal_flash.o"
+"capture\stm32f1xx_hal_flash_ex.o"
+"capture\stm32f1xx_hal_exti.o"
+"capture\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Capture\Capture.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Capture.map" -o Capture\Capture.axf

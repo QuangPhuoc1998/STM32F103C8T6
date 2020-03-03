@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"truyen_dong_dien\startup_stm32f103xb.o"
+"truyen_dong_dien\my_ili9341.o"
+"truyen_dong_dien\tsc2046.o"
+"truyen_dong_dien\main.o"
+"truyen_dong_dien\stm32f1xx_it.o"
+"truyen_dong_dien\stm32f1xx_hal_msp.o"
+"truyen_dong_dien\stm32f1xx_hal_gpio_ex.o"
+"truyen_dong_dien\stm32f1xx_hal_spi.o"
+"truyen_dong_dien\stm32f1xx_hal_tim.o"
+"truyen_dong_dien\stm32f1xx_hal_tim_ex.o"
+"truyen_dong_dien\stm32f1xx_hal_uart.o"
+"truyen_dong_dien\stm32f1xx_hal.o"
+"truyen_dong_dien\stm32f1xx_hal_rcc.o"
+"truyen_dong_dien\stm32f1xx_hal_rcc_ex.o"
+"truyen_dong_dien\stm32f1xx_hal_gpio.o"
+"truyen_dong_dien\stm32f1xx_hal_dma.o"
+"truyen_dong_dien\stm32f1xx_hal_cortex.o"
+"truyen_dong_dien\stm32f1xx_hal_pwr.o"
+"truyen_dong_dien\stm32f1xx_hal_flash.o"
+"truyen_dong_dien\stm32f1xx_hal_flash_ex.o"
+"truyen_dong_dien\stm32f1xx_hal_exti.o"
+"truyen_dong_dien\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Truyen_dong_dien\Truyen_dong_dien.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Truyen_dong_dien.map" -o Truyen_dong_dien\Truyen_dong_dien.axf

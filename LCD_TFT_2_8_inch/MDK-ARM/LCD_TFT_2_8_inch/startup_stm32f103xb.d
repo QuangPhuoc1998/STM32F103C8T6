@@ -1,0 +1,1 @@
+lcd_tft_2_8_inch\startup_stm32f103xb.o: startup_stm32f103xb.s

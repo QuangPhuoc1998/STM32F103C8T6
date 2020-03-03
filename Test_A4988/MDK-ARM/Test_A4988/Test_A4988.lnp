@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"test_a4988\startup_stm32f103xb.o"
+"test_a4988\my_ili9341.o"
+"test_a4988\tsc2046.o"
+"test_a4988\main.o"
+"test_a4988\stm32f1xx_it.o"
+"test_a4988\stm32f1xx_hal_msp.o"
+"test_a4988\stm32f1xx_hal_gpio_ex.o"
+"test_a4988\stm32f1xx_hal_spi.o"
+"test_a4988\stm32f1xx_hal_tim.o"
+"test_a4988\stm32f1xx_hal_tim_ex.o"
+"test_a4988\stm32f1xx_hal.o"
+"test_a4988\stm32f1xx_hal_rcc.o"
+"test_a4988\stm32f1xx_hal_rcc_ex.o"
+"test_a4988\stm32f1xx_hal_gpio.o"
+"test_a4988\stm32f1xx_hal_dma.o"
+"test_a4988\stm32f1xx_hal_cortex.o"
+"test_a4988\stm32f1xx_hal_pwr.o"
+"test_a4988\stm32f1xx_hal_flash.o"
+"test_a4988\stm32f1xx_hal_flash_ex.o"
+"test_a4988\stm32f1xx_hal_exti.o"
+"test_a4988\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Test_A4988\Test_A4988.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Test_A4988.map" -o Test_A4988\Test_A4988.axf

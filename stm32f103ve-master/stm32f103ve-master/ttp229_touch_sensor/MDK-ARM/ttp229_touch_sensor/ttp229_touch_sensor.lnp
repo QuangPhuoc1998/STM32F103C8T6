@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"ttp229_touch_sensor\startup_stm32f103xe.o"
+"ttp229_touch_sensor\dwt_stm32_delay.o"
+"ttp229_touch_sensor\ttp229.o"
+"ttp229_touch_sensor\main.o"
+"ttp229_touch_sensor\gpio.o"
+"ttp229_touch_sensor\usart.o"
+"ttp229_touch_sensor\stm32f1xx_it.o"
+"ttp229_touch_sensor\stm32f1xx_hal_msp.o"
+"ttp229_touch_sensor\stm32f1xx_hal_gpio_ex.o"
+"ttp229_touch_sensor\stm32f1xx_hal_tim.o"
+"ttp229_touch_sensor\stm32f1xx_hal_tim_ex.o"
+"ttp229_touch_sensor\stm32f1xx_hal_uart.o"
+"ttp229_touch_sensor\stm32f1xx_hal.o"
+"ttp229_touch_sensor\stm32f1xx_hal_rcc.o"
+"ttp229_touch_sensor\stm32f1xx_hal_rcc_ex.o"
+"ttp229_touch_sensor\stm32f1xx_hal_gpio.o"
+"ttp229_touch_sensor\stm32f1xx_hal_dma.o"
+"ttp229_touch_sensor\stm32f1xx_hal_cortex.o"
+"ttp229_touch_sensor\stm32f1xx_hal_pwr.o"
+"ttp229_touch_sensor\stm32f1xx_hal_flash.o"
+"ttp229_touch_sensor\stm32f1xx_hal_flash_ex.o"
+"ttp229_touch_sensor\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "ttp229_touch_sensor\ttp229_touch_sensor.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ttp229_touch_sensor.map" -o ttp229_touch_sensor\ttp229_touch_sensor.axf

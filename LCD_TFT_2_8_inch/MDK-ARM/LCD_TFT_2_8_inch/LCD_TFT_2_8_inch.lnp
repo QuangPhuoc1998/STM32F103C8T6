@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"lcd_tft_2_8_inch\startup_stm32f103xb.o"
+"lcd_tft_2_8_inch\main.o"
+"lcd_tft_2_8_inch\stm32f1xx_it.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_msp.o"
+"lcd_tft_2_8_inch\tft_spi.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_gpio_ex.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_spi.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_tim.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_tim_ex.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_rcc.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_rcc_ex.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_gpio.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_dma.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_cortex.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_pwr.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_flash.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_flash_ex.o"
+"lcd_tft_2_8_inch\stm32f1xx_hal_exti.o"
+"lcd_tft_2_8_inch\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "LCD_TFT_2_8_inch\LCD_TFT_2_8_inch.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LCD_TFT_2_8_inch.map" -o LCD_TFT_2_8_inch\LCD_TFT_2_8_inch.axf

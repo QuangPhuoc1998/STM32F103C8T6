@@ -1,0 +1,1 @@
+usart_receive_string\startup_stm32f103xb.o: startup_stm32f103xb.s
