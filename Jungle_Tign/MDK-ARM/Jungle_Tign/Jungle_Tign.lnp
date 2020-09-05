@@ -1,13 +1,12 @@
 --cpu Cortex-M3
 "jungle_tign\startup_stm32f103xb.o"
+"jungle_tign\i2c_lcd.o"
 "jungle_tign\main.o"
 "jungle_tign\stm32f1xx_it.o"
 "jungle_tign\stm32f1xx_hal_msp.o"
-"jungle_tign\i2c_lcd.o"
+"jungle_tign\system_stm32f1xx.o"
 "jungle_tign\stm32f1xx_hal_gpio_ex.o"
 "jungle_tign\stm32f1xx_hal_i2c.o"
-"jungle_tign\stm32f1xx_hal_tim.o"
-"jungle_tign\stm32f1xx_hal_tim_ex.o"
 "jungle_tign\stm32f1xx_hal.o"
 "jungle_tign\stm32f1xx_hal_rcc.o"
 "jungle_tign\stm32f1xx_hal_rcc_ex.o"
@@ -18,7 +17,8 @@
 "jungle_tign\stm32f1xx_hal_flash.o"
 "jungle_tign\stm32f1xx_hal_flash_ex.o"
 "jungle_tign\stm32f1xx_hal_exti.o"
-"jungle_tign\system_stm32f1xx.o"
+"jungle_tign\stm32f1xx_hal_tim.o"
+"jungle_tign\stm32f1xx_hal_tim_ex.o"
 --library_type=microlib --strict --scatter "Jungle_Tign\Jungle_Tign.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

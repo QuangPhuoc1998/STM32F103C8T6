@@ -24,6 +24,12 @@ int main(void)
 	//
 	ILI9341_Init(&hspi1, LCD_CS_GPIO_Port, LCD_CS_Pin, LCD_DC_GPIO_Port, LCD_DC_Pin, LCD_RST_GPIO_Port, LCD_RST_Pin);
 	ILI9341_setRotation(2);
+	/*-*/
+	ILI9341_Fill(COLOR_RED);
+	ILI9341_Fill(COLOR_BLUE);
+	ILI9341_Fill(COLOR_BLACK);
+	ILI9341_Fill(COLOR_GREEN);
+	/*-*/
 	ILI9341_Fill_Rect(0,0,279,239,COLOR_WHITE);
 	ILI9341_Fill_Rect(280,0,319,59,COLOR_RED);
 	ILI9341_Fill_Rect(280,60,319,119,COLOR_GREEN);
@@ -104,7 +110,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;

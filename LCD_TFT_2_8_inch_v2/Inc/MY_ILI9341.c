@@ -315,7 +315,8 @@ void ILI9341_SendData(uint8_t data)
 	//Put CS LOW
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
 	//Write byte using SPI
-	HAL_SPI_Transmit(&lcdSPIhandle, &tmpCmd, 1, 5);
+		HAL_SPI_Transmit(&lcdSPIhandle, &tmpCmd, 1,0);
+	//HAL_SPI_Transmit_DMA(&lcdSPIhandle,&tmpCmd,1);
 	//Bring CS HIGH
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }

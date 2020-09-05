@@ -294,13 +294,13 @@ const unsigned char font1[] = {
 void ILI9341_SendCommand(uint8_t com)
 {
 	//*(__IO uint8_t *)(0x60000000) = com;
-	uint8_t tmpCmd = com;
+	//uint8_t tmpCmd = com;
 	//Set DC HIGH for COMMAND mode
 	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_RESET);
 	//Put CS LOW
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
 	//Write byte using SPI
-	HAL_SPI_Transmit(&lcdSPIhandle, &tmpCmd, 1, 5);
+	HAL_SPI_Transmit(&lcdSPIhandle, &com, 1, 1);
 	//Bring CS HIGH
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }
@@ -309,21 +309,19 @@ void ILI9341_SendCommand(uint8_t com)
 void ILI9341_SendData(uint8_t data)
 {
 	//*(__IO uint8_t *)(0x60040000) = data;
-	uint8_t tmpCmd = data;
+	//uint8_t tmpCmd = data;
 	//Set DC LOW for DATA mode
 	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
 	//Put CS LOW
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
 	//Write byte using SPI
-	HAL_SPI_Transmit(&lcdSPIhandle, &tmpCmd, 1, 5);
+	HAL_SPI_Transmit(&lcdSPIhandle, &data, 1, 1);
 	//Bring CS HIGH
 	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }
 //2.2 Write multiple/DMA
 void ILI9341_SendData_Multi(uint16_t Colordata, uint32_t size)
 {
-	uint8_t colorL,colorH;
-	
 	//Set DC LOW for DATA mode
 	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
 	//Put CS LOW
@@ -336,20 +334,29 @@ void ILI9341_SendData_Multi(uint16_t Colordata, uint32_t size)
 }
 
 //3. Set cursor position
-void ILI9341_SetCursorPosition(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2) {
-
-  ILI9341_SendCommand (ILI9341_COLUMN_ADDR);
-  ILI9341_SendData(x1>>8);
-  ILI9341_SendData(x1 & 0xFF);
-  ILI9341_SendData(x2>>8);
-  ILI9341_SendData(x2 & 0xFF);
-
-  ILI9341_SendCommand (ILI9341_PAGE_ADDR);
-  ILI9341_SendData(y1>>8);
-  ILI9341_SendData(y1 & 0xFF);
-  ILI9341_SendData(y2>>8);
-  ILI9341_SendData(y2 & 0xFF);
-  ILI9341_SendCommand (ILI9341_GRAM);
+void ILI9341_SetCursorPosition(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2) 
+{
+	uint8_t i;
+	uint8_t buffer[11] = {ILI9341_COLUMN_ADDR,x1>>8,x1 & 0xFF,x2>>8,x2 & 0xFF,ILI9341_PAGE_ADDR,y1>>8,y1 & 0xFF,y2>>8,y2 & 0xFF,ILI9341_GRAM};
+	/*---*/
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
+	/*-*/
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&lcdSPIhandle, &buffer[0], 1, 1);
+	/*-*/
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
+	for(i=1;i<5;i++) HAL_SPI_Transmit(&lcdSPIhandle, &buffer[i], 1, 1);
+	/*-*/
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&lcdSPIhandle, &buffer[5], 1, 1);
+	/*-*/
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
+	for(i=6;i<10;i++) HAL_SPI_Transmit(&lcdSPIhandle, &buffer[i], 1, 1);
+	/*-*/
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&lcdSPIhandle, &buffer[10], 1, 1);
+	/*-*/
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }
 //4. Initialise function
 void ILI9341_Init(SPI_HandleTypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
@@ -437,16 +444,22 @@ void ILI9341_Init(SPI_HandleTypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_
  }
 
 //5. Write data to a single pixel
-void ILI9341_DrawPixel(uint16_t x, uint16_t y, uint16_t color) {
+void ILI9341_DrawPixel(uint16_t x, uint16_t y, uint16_t color) 
+{
+	uint8_t buffer[2] = {color>>8,color&0xFF};
+	/*-*/
   ILI9341_SetCursorPosition(x, y, x, y);
-	ILI9341_SendData(color>>8);
-	ILI9341_SendData(color&0xFF);
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
+	HAL_SPI_Transmit(&lcdSPIhandle, &buffer[0], 1, 1);
+	HAL_SPI_Transmit(&lcdSPIhandle, &buffer[1], 1, 1);
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }
 //6. Fill the entire screen with a background color
-void ILI9341_Fill(uint16_t color) {
+void ILI9341_Fill(uint16_t color) 
+{
 	uint32_t n = ILI9341_PIXEL_COUNT;
-	uint16_t myColor = 0xFF;
-	
+	uint8_t buffer[2] = {color>>8,color&0xFF};
 	if(rotationNum==1 || rotationNum==3)
 	{
 		ILI9341_SetCursorPosition(0, 0,   ILI9341_WIDTH -1, ILI9341_HEIGHT -1);
@@ -455,13 +468,15 @@ void ILI9341_Fill(uint16_t color) {
 	{
 		ILI9341_SetCursorPosition(0, 0, ILI9341_HEIGHT -1, ILI9341_WIDTH -1);
 	}
-	
-	
-	while (n) {
-			n--;
-       ILI9341_SendData(color>>8);
-				ILI9341_SendData(color&0xff);
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(tftDC_GPIO, tftDC_PIN, GPIO_PIN_SET);
+	while (n) 
+	{
+		n--;
+	  HAL_SPI_Transmit(&lcdSPIhandle, &buffer[0], 1, 1);
+	  HAL_SPI_Transmit(&lcdSPIhandle, &buffer[1], 1, 1);
 	}
+	HAL_GPIO_WritePin(tftCS_GPIO, tftCS_PIN, GPIO_PIN_SET);
 }
 //7. Rectangle drawing functions
 void ILI9341_Fill_Rect(unsigned int x0,unsigned int y0, unsigned int x1,unsigned int y1, uint16_t color) { 

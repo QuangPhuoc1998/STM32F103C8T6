@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ili9341_dam\startup_stm32f103xb.o"
+"ili9341_dam\main.o"
+"ili9341_dam\stm32f1xx_it.o"
+"ili9341_dam\stm32f1xx_hal_msp.o"
+"ili9341_dam\fonts.o"
+"ili9341_dam\ili9341.o"
+"ili9341_dam\stm32f1xx_hal_gpio_ex.o"
+"ili9341_dam\stm32f1xx_hal_spi.o"
+"ili9341_dam\stm32f1xx_hal.o"
+"ili9341_dam\stm32f1xx_hal_rcc.o"
+"ili9341_dam\stm32f1xx_hal_rcc_ex.o"
+"ili9341_dam\stm32f1xx_hal_gpio.o"
+"ili9341_dam\stm32f1xx_hal_dma.o"
+"ili9341_dam\stm32f1xx_hal_cortex.o"
+"ili9341_dam\stm32f1xx_hal_pwr.o"
+"ili9341_dam\stm32f1xx_hal_flash.o"
+"ili9341_dam\stm32f1xx_hal_flash_ex.o"
+"ili9341_dam\stm32f1xx_hal_exti.o"
+"ili9341_dam\stm32f1xx_hal_tim.o"
+"ili9341_dam\stm32f1xx_hal_tim_ex.o"
+"ili9341_dam\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "ILI9341_DAM\ILI9341_DAM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ILI9341_DAM.map" -o ILI9341_DAM\ILI9341_DAM.axf

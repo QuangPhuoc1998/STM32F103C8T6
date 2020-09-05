@@ -3,10 +3,9 @@
 "test_\main.o"
 "test_\stm32f1xx_it.o"
 "test_\stm32f1xx_hal_msp.o"
+"test_\system_stm32f1xx.o"
 "test_\stm32f1xx_hal_gpio_ex.o"
 "test_\stm32f1xx_hal_spi.o"
-"test_\stm32f1xx_hal_tim.o"
-"test_\stm32f1xx_hal_tim_ex.o"
 "test_\stm32f1xx_hal.o"
 "test_\stm32f1xx_hal_rcc.o"
 "test_\stm32f1xx_hal_rcc_ex.o"
@@ -17,7 +16,8 @@
 "test_\stm32f1xx_hal_flash.o"
 "test_\stm32f1xx_hal_flash_ex.o"
 "test_\stm32f1xx_hal_exti.o"
-"test_\system_stm32f1xx.o"
+"test_\stm32f1xx_hal_tim.o"
+"test_\stm32f1xx_hal_tim_ex.o"
 --library_type=microlib --strict --scatter "Test_\Test_.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

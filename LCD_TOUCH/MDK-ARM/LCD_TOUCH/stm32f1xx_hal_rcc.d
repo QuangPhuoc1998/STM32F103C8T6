@@ -6,13 +6,13 @@ lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Include/core_cm3.h
-lcd_touch\stm32f1xx_hal_rcc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lcd_touch\stm32f1xx_hal_rcc.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stdint.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
-lcd_touch\stm32f1xx_hal_rcc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lcd_touch\stm32f1xx_hal_rcc.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stddef.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 lcd_touch\stm32f1xx_hal_rcc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

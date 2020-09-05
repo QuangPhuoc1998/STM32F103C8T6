@@ -463,11 +463,11 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=lcd_touch\startup_stm32f103xb.d -olcd_touch\startup_stm32f103xb.o 
--I.\RTE\_LCD_TOUCH -IC:\Users\Admin\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMS
-IS\Core\Include -IC:\Users\Admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3
-.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 528" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list
-=startup_stm32f103xb.lst startup_stm32f103xb.s
+-I.\RTE\_LCD_TOUCH -I"D:\Program Files\ARM\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Inc
+lude" -I"D:\Program Files\ARM\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include" --
+predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 529" --predef
+ine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=startup_stm32f103xb
+.lst startup_stm32f103xb.s
 
 
 

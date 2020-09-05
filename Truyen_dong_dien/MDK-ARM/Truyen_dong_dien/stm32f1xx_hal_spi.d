@@ -6,13 +6,13 @@ truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Include/core_cm3.h
-truyen_dong_dien\stm32f1xx_hal_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+truyen_dong_dien\stm32f1xx_hal_spi.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stdint.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Include/cmsis_version.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
-truyen_dong_dien\stm32f1xx_hal_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+truyen_dong_dien\stm32f1xx_hal_spi.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stddef.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 truyen_dong_dien\stm32f1xx_hal_spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

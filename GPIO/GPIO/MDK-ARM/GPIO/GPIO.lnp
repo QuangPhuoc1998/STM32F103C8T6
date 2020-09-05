@@ -3,6 +3,7 @@
 "gpio\main.o"
 "gpio\stm32f1xx_it.o"
 "gpio\stm32f1xx_hal_msp.o"
+"gpio\system_stm32f1xx.o"
 "gpio\stm32f1xx_hal_gpio_ex.o"
 "gpio\stm32f1xx_hal_tim.o"
 "gpio\stm32f1xx_hal_tim_ex.o"
@@ -16,7 +17,6 @@
 "gpio\stm32f1xx_hal_flash.o"
 "gpio\stm32f1xx_hal_flash_ex.o"
 "gpio\stm32f1xx_hal_exti.o"
-"gpio\system_stm32f1xx.o"
 --library_type=microlib --strict --scatter "GPIO\GPIO.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
