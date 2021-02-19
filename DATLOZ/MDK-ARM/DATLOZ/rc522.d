@@ -1,0 +1,31 @@
+datloz\rc522.o: ..\Src\rc522.c
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+datloz\rc522.o: ../Inc/stm32f1xx_hal_conf.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
+datloz\rc522.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
+datloz\rc522.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+datloz\rc522.o: ../Drivers/CMSIS/Include/core_cm3.h
+datloz\rc522.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stdint.h
+datloz\rc522.o: ../Drivers/CMSIS/Include/cmsis_version.h
+datloz\rc522.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+datloz\rc522.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+datloz\rc522.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+datloz\rc522.o: D:\Program Files\Keil for arm\ARM\ARMCC\Bin\..\include\stddef.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
+datloz\rc522.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+datloz\rc522.o: ../Inc/rc522.h

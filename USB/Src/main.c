@@ -10,6 +10,8 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 int main(void)
 {
+	uint16_t temp = 0, humi = 0, sun = 0, rain = 0, speed= 0, direction = 0;
+	uint8_t buffer_to_send[64];
   HAL_Init();
   SystemClock_Config();
 	
@@ -18,8 +20,13 @@ int main(void)
 	
   while (1)
   {
-		CDC_Transmit_FS((uint8_t*)"PHUOC ",6);
-		HAL_Delay(1000);
+		sprintf((char*)buffer_to_send,"1,%d,%d,%d,%d,%d,%d",temp, humi, sun, rain, speed, direction);
+		CDC_Transmit_FS(buffer_to_send,strlen((const char*)buffer_to_send));
+		HAL_Delay(50);
+		CDC_Transmit_FS((uint8_t*)"W",1);
+		if(100 == temp) temp = 0; else temp++;
+		humi = sun = rain = speed = direction = temp;
+		HAL_Delay(950);
   }
 }
 void CDC_ReceiveCallBack(uint8_t *buf, uint32_t len)
